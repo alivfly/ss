@@ -1,7 +1,7 @@
 cat > /ssrbin/config.json <<EOF
 {
     "password": "${PASSWORD}",
-    "method": "aes-128-ctr",
+    "method": "aes-256-gcm",
     "protocol": "origin",
     "protocol_param": "",
     "obfs": "plain",
@@ -26,8 +26,8 @@ cat > /ssrbin/config.json <<EOF
 
     "over_tls_settings": {
         "enable": true,
-        "server_domain": "${APP_SITE}",
-        "path": "/${SECRET_PATH}/",
+        "server_domain": "",
+        "path": "",
         "root_cert_file": ""
     }
 }
